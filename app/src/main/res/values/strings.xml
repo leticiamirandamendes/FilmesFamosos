@@ -1,0 +1,23 @@
+<resources>
+    <string name="app_name">Filmes Famosos</string>
+    <string name="titulo">Título</string>
+    <string name="lancamento">Lançamento</string>
+    <string name="nota">Nota</string>
+    <string name="sinopse">Sinopse</string>
+    <string name="playButton">Play Button</string>
+    <string name="poster">Poster do filme</string>
+    <string name="trailers">Trailers e vídeos relacionados</string>
+    <string name="reviews">Críticas dos usuários</string>
+    <string name="button_text">Adicionar aos favoritos</string>
+    <string name="url_movie">http://api.themoviedb.org/3/movie/</string>
+    <string name="url_yt">https://www.youtube.com/watch?v=</string>
+    <string name="selected_movie">selected_movie</string>
+    <string name="error">Error</string>
+    <string name="fav_add">favourite_added</string>
+    <string name="api_endpoint">http://api.themoviedb.org/3</string>
+    <string name="retry">Tentar Novamente</string>
+    <string name="offline_text">Você está offline</string>
+    <string name="fav">Favorito</string>
+    <string name="where">id=</string>
+
+</resources>

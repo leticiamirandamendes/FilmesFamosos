@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/details"
+    style="@android:style/Widget.DeviceDefault.Light.ScrollView"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/background_light"
+    android:scrollbarStyle="insideOverlay"
+    android:fillViewport="true">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/_5dp">
+
+        <TextView
+            android:id="@+id/movie_title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:text="@string/titulo"
+            android:textAlignment="center"
+            android:textColor="@color/colorPrimary"
+            android:textSize="@dimen/_30sp" />
+
+        <TextView
+            android:id="@+id/movie_release"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/_24dp"
+            android:layout_below="@+id/movie_title"
+            android:layout_centerHorizontal="true"
+            android:text="@string/lancamento"
+            android:textColor="@color/colorPrimary"
+            android:textSize="@dimen/_18sp" />
+
+        <RatingBar
+            android:id="@+id/movie_rating"
+            style="?android:attr/ratingBarStyleSmall"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@+id/rating"
+            android:layout_alignEnd="@+id/frameLayout"
+            android:numStars="10"
+            android:progressTint="@color/colorPrimary" />
+
+
+        <TextView
+            android:id="@+id/movie_description"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_below="@+id/movie_rating"
+            android:layout_marginTop="@dimen/_11dp"
+            android:padding="@dimen/_10dp"
+            android:text="@string/sinopse"
+            android:textColor="@android:color/black"
+            android:textSize="@dimen/_18sp"
+            tools:text="@string/sinopse" />
+
+        <TextView
+            android:id="@+id/rating"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/_28dp"
+            android:layout_below="@+id/frameLayout"
+            android:layout_toStartOf="@+id/movie_rating"
+            android:text="@string/nota"
+            android:textColor="@color/colorPrimary"
+            android:textSize="@dimen/_24sp" />
+
+        <FrameLayout
+            android:id="@+id/frameLayout"
+            android:layout_width="@dimen/_200dp"
+            android:layout_height="@dimen/_250dp"
+            android:layout_below="@+id/movie_release"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="@dimen/_16dp">
+
+            <ImageView
+                android:id="@+id/movie_poster"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:contentDescription="@string/poster"
+                app:srcCompat="@android:color/darker_gray" />
+
+        </FrameLayout>
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/rv_trailers"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_alignParentStart="true"
+            android:layout_below="@+id/textView"
+            android:layout_margin="@dimen/_10dp" />
+
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_below="@+id/add_fav_btn"
+            android:layout_margin="@dimen/_10dp"
+            android:text="@string/trailers"
+            android:textAlignment="center"
+            android:textColor="@color/colorPrimary"
+            android:textSize="@dimen/_18sp" />
+
+        <TextView
+            android:id="@+id/textView2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_below="@+id/rv_trailers"
+            android:layout_margin="@dimen/_10dp"
+            android:text="@string/reviews"
+            android:textAlignment="center"
+            android:textColor="@color/colorPrimary"
+            android:textSize="@dimen/_18sp" />
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/rv_reviews"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_below="@id/textView2"
+            android:layout_margin="@dimen/_10dp" />
+
+        <Button
+            android:id="@+id/add_fav_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/movie_description"
+            android:layout_centerHorizontal="true"
+            android:backgroundTint="@color/buttonColor"
+            android:text="@string/button_text"
+            android:textAlignment="center"
+            android:textAllCaps="false"
+            android:textColor="@android:color/background_light" />
+
+    </RelativeLayout>
+
+</ScrollView>
